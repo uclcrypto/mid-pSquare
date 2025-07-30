@@ -1,3 +1,4 @@
+// In part based on the code published under CERN Open Hardware Licence Version 2 at https://github.com/uclcrypto/small-pSquare
 #include <stdint.h>
 
 #define n 7

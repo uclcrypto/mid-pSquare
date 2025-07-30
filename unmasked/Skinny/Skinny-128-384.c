@@ -439,9 +439,11 @@ void permute_tk(uint32_t* tk, const uint8_t* key)
 		tmp[2] = tk[i*4+6] ^ tk1[2];
 		tmp[3] = tk[i*4+7] ^ tk1[3];
 		if (test)
+		{
 			permute_tk_2(tmp);
-		else
+		}else{
 			permute_tk_10(tmp);
+		}
 		tk[i*4+ 4]  = ROR(tmp[0], 26) & 0xc3c3c3c3;
 		tk[i*4+ 5]  = ROR(tmp[1], 26) & 0xc3c3c3c3;
 		tk[i*4+ 6]  = ROR(tmp[2], 26) & 0xc3c3c3c3;
