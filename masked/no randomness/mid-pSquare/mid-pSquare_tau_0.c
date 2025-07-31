@@ -16,11 +16,11 @@
 
 #define RAND_CONST 0x618dde64
 
-void __attribute__((always_inline)) SQ_dshares(const uint32_t *a, uint32_t *b);
+void inline SQ_dshares(const uint32_t *a, uint32_t *b);
 void __attribute__((noinline)) Encrypt(uint32_t **plaintext, uint32_t **key, uint32_t **ciphertext);
 void __attribute__((noinline)) Decrypt(uint32_t **ciphertext, uint32_t **key, uint32_t **plaintext);
 
-void __attribute__((always_inline)) SQ_dshares(const uint32_t *a, uint32_t *b)
+void inline SQ_dshares(const uint32_t *a, uint32_t *b)
 {
 	// Iteration i=0 pulled out of nested loop to save some cycles
 	uint32_t gamma = a[0];
